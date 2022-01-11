@@ -1,0 +1,266 @@
+
+.background-video video {
+  width: 100%;
+  margin-top: -15%;
+  z-index: -1;
+}
+
+/**/
+
+section {
+  position: relative;
+}
+
+
+.search-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 60%;
+  background-color: #fff;
+  padding: .5em;
+  box-shadow: 0px .125rem .25rem rgba(0, 0, 0, .5);
+  margin-bottom: -2.5em;
+  border-radius: .25rem;
+}
+
+.search-box input[type=text] {
+  border: none;
+  outline: none; 
+  font-size: 18px;
+  padding: 1em;
+  width: calc(100% - 75px - 3em);
+}
+
+.search-box button {
+    height: 55px;
+    float: right;
+}
+
+
+.search-box ul {
+  position: absolute;
+  top: 100%;
+  width:100%;
+  border-radius: 10px;
+  list-style: none;
+  padding-left: 0;
+  z-index: 999;
+  box-shadow: 0px .125rem .25rem rgba(0, 0, 0, .5);
+  margin-left: -6px;
+  height: 0;
+  overflow-y: hidden;
+
+  transition: height .5s; 
+}
+
+.search-box li {
+    padding: .5em 1em;
+  background-color: #fff;
+    font-size: 1.2em;
+    transition: color .3s;
+    cursor: pointer;
+}
+
+.search-box li:hover {
+  background-color: #eee;
+}
+
+.search-box li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+
+.search-box li:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.search-box li:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+
+.search-box input[type=text]:focus ~ ul {
+  height: calc(43.19px * 4);
+}
+
+/****/
+
+section:nth-child(2) {
+  margin-top: 3em;
+  padding: 4em;
+}
+
+
+.most-popular .title{
+  
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.most-popular nav  {
+  display: table;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+
+.most-popular nav>div  {
+  display: table-row;
+}
+
+
+.most-popular nav>div>* {
+  display: table-cell;
+  text-align: center;
+  padding: .25em 1em;
+}
+
+
+.most-popular nav>div>*:not(.title) {
+  border-bottom: 1px solid #999;
+  cursor: pointer;
+  opacity: .7;
+  font-size: .95em;
+  font-weight: 600;
+}
+
+.most-popular nav>div>*:hover,
+.most-popular nav>div>*.active {
+  opacity: 1;
+}
+
+.most-popular nav>div>*.active {
+  border-bottom: 2px solid #1591ba;
+}
+
+
+#most-popular-content table {
+  width: 100%;
+  border-spacing: .75em;
+  border-collapse: separate;
+}
+
+#most-popular-content td {
+  background-color: #fff;
+  border-radius: .25em;
+  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .15);
+
+}
+
+
+#most-popular-content td .image {
+  height: 300px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: .25em;
+}
+
+
+
+#most-popular-content td .image {
+  height: 300px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: .25em;
+  margin: -1px;
+}
+
+
+
+#most-popular-content td .body {
+  padding: 1em .5em;
+}
+
+
+#most-popular-content td .body h6 {
+  margin: 0;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+
+#most-popular-content td .body div {
+  width: 100%;
+  font-size: .8em;
+  display: table;
+  border-spacing: 0;
+}
+
+
+#most-popular-content td .body div>span {
+  width: 33%;
+  display: table-cell;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+
+#most-popular-content td .body div>span .icon {
+  margin-right: .5em;
+}
+
+#most-popular-content td .body div>span .icon:not(.fa-star) {
+  color: #999;
+}
+
+#most-popular-content td .body div>span:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+
+ .sign-up {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 1em 2em;
+  background-color: #ffffff;
+  border-radius: .25em;
+  width: 0px;
+  height: 0px;
+  display: none;
+  font-size: 1.2em;
+}
+
+.backdrop.visible .sign-up {
+  width: 400px;
+  height: 220px;
+  display: block;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 0%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  /* transition: opacity .5s; */
+}
+
+.backdrop.visible {
+  width: 100%;
+  height: 100%;
+  /* opacity: 1; */
+}
+
+.sign-up input {
+  display: inline-block;
+  width: calc(100% - 2rem);
+  margin: 10px 0px;
+  padding: 0.5em 1em;
+}
+
+.close {
+  cursor: pointer;
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./dist/css/styles.min.css">
+
+    
+    <!-- <link rel="stylesheet" href="./agencia/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./agencia/owl/css/owl.css">
+    <link rel="stylesheet" href="./agencia/fontawesome/fontawesome.css">
+    <link rel="stylesheet" href="./agencia/jquery-ui/jquery-ui.min.css"> -->
+
+    <!-- <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="./src/css/home.css"> -->
+    <title>TravelAgency</title>
+</head>
+<body>
+    
+    <nav class="topnav">
+        <!-- <div class="container"> -->
+            <a class="logo" href="index.html">TravelAgency</a>
+            <div class="nav-links">
+                <a href="./index.html" class="active">Home</a>
+                <a href="https://www.google.com/flights?hl=pt-PT#flt=/m/04llb..2019-11-11*./m/04llb.2019-11-15;c:EUR;e:1;ls:1w;sd:0;t:h">Explore</a>
+
+                <button type="button" class="btn btn-primary" onclick="openPopup()">Log In</button>
+            <!-- </div> -->
+        </div>
+    </nav>
+    
+    
+    <div id="featured" class="featured-items">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <div class="title"> 
+                            <h2>Most Popular</h2>
+                       </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="featured-item">
+                            <img src="./src/images/experiences/FreeFall.jpg" alt="Item 1">
+                            <h4>Sky diving</h4>
+                            <h6>256 €</h6>
+                            <a href="./experiences.html">
+                                Verificar
+                            </a>
+                        </div>
+                        <div class="featured-item">
+                            <img src="./src/images/destinations/Reykjavik.jpg" alt="Item 2">
+                            <h4>Reykjavik</h4>
+                            <h6>150 €</h6>
+                            <a href="./destinations.html">
+                                Verificar
+                            </a>
+                        </div>
+                        <div class="featured-item">
+                            <img src="./src/images/guides/auschwitz1.jpg" alt="Item 3">
+                            <h4>Auschwitz</h4>
+                            <h6>100 €</h6>
+                            <a href="./guides.html">
+                                Verificar
+                            </a>
+                        </div>
+                        <div class="featured-item">
+                            <img src="./src/images/hotels/sheraton1.jpg" alt="Item 4">
+                            <h4>Sheraton Lisboa Hotel</h4>
+                            <h6>200 €</h6>
+                            <a href="./hotels.html" title="Sheraton Lisboa Hotel">
+                                Verificar
+                            </a>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section  class="most-popular">
+
+        <nav>
+              <div id="most-popular-tabs">
+
+                    <div class="nav-item" onclick="changeMostPopularTab('Destinations', this)">
+                          Destinations
+                    </div>
+                    <div class="nav-item" onclick="changeMostPopularTab('Hotels', this)">
+                          Hotels
+                    </div>
+                    <div class="nav-item" onclick="changeMostPopularTab('Guides', this)">
+                          Guides
+                    </div>
+                    <div class="nav-item" onclick="changeMostPopularTab('Experiences', this)">
+                          Experiences
+                    </div>
+
+              </div>
+        </nav>
+
+        <div id="most-popular-content"></div>
+    </section>
+
+    
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12">
+                    <div class="footer-menu">
+                        <ul>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" >Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-modal-open" href="#contato" rel="contato">Help</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-modal-open" href="#privacyPolicy" rel="privacyPolicy">Privacy Policy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-modal-open" href="#contato" rel="contato">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright-text">
+                        <p>ravelAgency &copy; Todos os direitos reservados
+                            <p>Realizado por: Tânia Guerreiro
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">              
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="contato" class="visually-hidden">
+
+        <form action="post" class="form">
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" name="nome" id="nome" title="Insira seu nome completo" class="form-control" placeholder="Digite seu nome" aria-describedby="helpNome">
+              <small id="helpNome" class="text-muted">
+                  Digite um nome válido
+              </small>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" name="email" id="email" class="form-control" placeholder="Digite seu e-mail" aria-describedby="helpEmail">
+                <small id="helpEmail" class="text-muted">
+                    Digite um e-mail válido
+                </small>
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label">Contato</label>
+                <input type="text" name="phone" id="phone" class="form-control" placeholder="Digite seu contato" aria-describedby="helpCelular" required>
+                <small id="helpCelular" class="text-muted">
+                    Digite um contato válido
+                </small>
+            </div>
+
+            <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <input type="text" name="mensagem" id="mensagem" class="form-control" placeholder="Digite a sua mensagem" aria-describedby="helpMensagem" required>
+                <small id="helpMensagem" class="text-muted">
+                    Digite
+                </small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+
+
+        </form>
+
+    </div>
+
+
+    <div id="privacyPolicy" class="visually-hidden">
+
+        <p>Teste</p>
+
+    </div>
+    
+    <!-- Bibliotecas -->
+    <!-- <script src="./dist/js/libs.min.js"></script> -->
+    <!-- <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
+    <!-- <script src="./agencia/owl/js/owl.js"></script>
+    <script src="./agencia/jquery-mask/jquery.mask.min.js"></script>
+    <script src="./agencia/jquery-ui/jquery-ui.min.js"></script>  -->
+    <script src="./agencia/jquery-mask/jquery.mask.min.js"></script>
+
+    <!-- Scripts Customizados -->
+    
+    <script type="text/javascript" src="./dist/js/scripts.min.js"></script>
+   
+    <!-- <script type="text/javascript" src="./src/js/custom.js"></script>
+    <script type="text/javascript" src="./src/libs/font-awesome/font-awesome.min.js"></script>-->
+    <!-- <script type="text/javascript" src="./src/js/mockup.js"></script> -->
+    <!--<script type="text/javascript" src="./src/js/main.js"></script> -->
+</body>
+</html>

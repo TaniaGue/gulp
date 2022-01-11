@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none !important;
+  color: unset;
+}
+
+button:not([disabled=disabled]) {
+  cursor: pointer;
+}
+
+nav.topnav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5em 4em;
+  background-color:#01394c;
+}
+
+nav.topnav .logo,
+nav.topnav .nav-links {
+  margin-top: -0.25em;
+}
+
+nav.topnav .logo {
+  color: #7a7a7a;
+  font-size: 1.3em;
+  font-weight: 800;
+  display: inline-block;
+}
+
+nav.topnav .nav-links {
+  float: right;
+}
+
+nav.topnav .nav-links a {
+  margin-right: 2em;
+  color: #7a7a7a;
+}
+
+nav.topnav .nav-links a:hover {
+  color: rgb(67, 66, 66);
+}
+
+nav.topnav .nav-links a.active {
+  color: #aaa;
+}
+
+nav.topnav .nav-links .btn-sign-up {
+  padding: 0.5em 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn {
+  padding: .5em 1em;
+  border: 0;
+  font-size: .875rem;
+
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #1591ba;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0d79a3;
+}
+
+
+.fa-star {
+  color: #e6ae09;
+}
+
+.right {
+  float: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+/* .footer {
+  background-color: #01394c;
+  color: #fff;
+  padding: 1em 5em;
+} */
+
+
+.my-5 {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+
+#description {
+  column-count: 3;
+}
+
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+/* .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+} */
+
+.modal-content {
+  margin: auto;
+  /* display: block; */
+  width: 80%;
+  max-width: 700px;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+.owl-theme .owl-dots {
+	text-align: center;
+	margin-top: 30px;
+}
+.owl-theme .owl-dots .owl-dot {
+	outline: none;
+}
+.owl-theme .owl-dots .active span {
+	background-color: #3a8bcd!important;
+}
+.owl-theme .owl-dots .owl-dot span {
+	background-color: #aaa;
+	width: 8px;
+	height: 8px;
+	display: inline-block;
+	margin: 0px 5px;
+	outline: none;
+}
+
+/* Footer Style */
+.footer {
+	text-align: center;
+  
+}
+.footer ul {
+	padding: 0px;
+	margin: 0px;
+}
+.footer ul li {
+	list-style: none;
+	display: inline-block;
+}
+.footer .logo img {
+	max-width: 100%;
+	margin-top: 60px;
+	margin-bottom: 40px;
+}
+.footer .footer-menu {
+	margin-bottom: 40px;
+}
+.footer .footer-menu ul li {
+	margin: 0px 15px;
+}
+.footer .footer-menu a {
+	font-size: 13px;
+	color: #7a7a7a;
+	text-transform: uppercase;
+	transition: all 0.5s;
+}
+.footer .footer-menu a:hover {
+	color: #3a8bcd;
+	text-decoration: none;
+}
+.footer .social-icons {
+	margin-bottom: 60px;
+}
+.footer .social-icons ul li {
+	margin: 0px 10px;
+}
+.footer .social-icons a {
+	width: 32px;
+	height: 32px;
+	color: #fff;
+	background-color: #aaa;
+	text-align: center;
+	display: inline-block;
+	line-height: 33px;
+	border-radius: 50%;
+	font-size: 13px;
+	transition: all 0.5s;
+}
+.footer .social-icons a:hover {
+	background-color: #3a8bcd;
+}
+
+.modal-backdrop.show {
+  opacity: 0;
+}

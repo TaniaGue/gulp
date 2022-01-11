@@ -1,0 +1,30 @@
+#images {
+      display: grid;
+      min-height: 500px;
+      grid-template-columns: 50% 1fr 1fr;
+      list-style: none;
+      padding: 0;
+}
+
+.item {
+      margin-left: 10px;
+      margin-bottom: 10px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: opacity .3s;
+}
+
+
+.item:hover {
+      opacity: .8;
+      cursor: pointer;
+}
+
+
+.item:first-child {
+      margin-left: 0;
+      grid-row: 1 / 3;
+}
+
+
